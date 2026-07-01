@@ -39,7 +39,7 @@ const Navbar = () => {
               </div>
               <div>
                 <h1 className="text-xl font-bold text-[#F5F3EF]">
-                  <span>Madina</span>
+                  <span>Happy Smiles</span>
                   <span className="text-[#C9A84C]">Dental</span>
                 </h1>
                 <p className="text-xs text-[#A09888]">Care Clinic</p>

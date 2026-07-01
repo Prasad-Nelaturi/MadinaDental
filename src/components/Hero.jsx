@@ -39,7 +39,7 @@ const Hero = () => {
               className="inline-flex items-center gap-3 neu-badge"
             >
               <span className="neu-dot" />
-              <span className="text-[#C9A84C] font-medium">Welcome to Madina Dental Care</span>
+              <span className="text-[#C9A84C] font-medium">Welcome to Happy Smiles Dental Care</span>
             </motion.div>
 
             {/* Headline */}

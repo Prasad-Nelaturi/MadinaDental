@@ -15,7 +15,7 @@ const Testimonials = () => {
       name: 'Aman Ganesh',
       location: 'Mumbai',
       image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face',
-      text: 'I am very satisfied with my experience at Madina Dental. The team is professional, caring, and the results are amazing!',
+      text: 'I am very satisfied with my experience at Happy Smiles Dental. The team is professional, caring, and the results are amazing!',
       rating: 5,
       date: '2 weeks ago'
     },
@@ -33,7 +33,7 @@ const Testimonials = () => {
       name: 'Rahul Verma',
       location: 'Ahmedabad',
       image: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=200&h=200&fit=crop&crop=face',
-      text: 'Excellent service and friendly staff. I highly recommend Madina Dental Care to everyone looking for quality dental treatment.',
+      text: 'Excellent service and friendly staff. I highly recommend Happy Smiles Dental Care to everyone looking for quality dental treatment.',
       rating: 5,
       date: '3 weeks ago'
     },
@@ -51,7 +51,7 @@ const Testimonials = () => {
       name: 'Vikram Singh',
       location: 'Jaipur',
       image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200&h=200&fit=crop&crop=face',
-      text: 'Professional, caring, and affordable. My entire family now comes to Madina Dental.',
+      text: 'Professional, caring, and affordable. My entire family now comes to Happy Smiles Dental.',
       rating: 5,
       date: '2 months ago'
     },

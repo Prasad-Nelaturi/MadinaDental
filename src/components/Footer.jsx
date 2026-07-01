@@ -43,7 +43,7 @@ const Footer = () => {
               </div>
               <div>
                 <h2 className="text-xl font-bold">
-                  <span className="text-white">Madina</span>
+                  <span className="text-white">Happy Smiles</span>
                   <span className="text-[#C9A84C]">Dental</span>
                 </h2>
                 <p className="text-xs text-[#A0A0A0]">Care Clinic</p>
@@ -120,7 +120,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-3">
                 <Mail size={18} className="text-[#C9A84C] flex-shrink-0" />
-                <span className="text-sm text-[#A0A0A0]">info@madinadental.com</span>
+                <span className="text-sm text-[#A0A0A0]">info@happysmilesdentalcare.com</span>
               </div>
               <div className="flex items-start gap-3">
                 <Clock size={18} className="text-[#C9A84C] mt-0.5 flex-shrink-0" />

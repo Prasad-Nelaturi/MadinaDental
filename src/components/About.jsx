@@ -139,13 +139,13 @@ const About = () => {
               <h2 className="text-4xl sm:text-5xl lg:text-5xl font-bold leading-tight">
                 <span className="text-white">About</span>
                 <br />
-                <span className="bg-gradient-to-r from-[#C9A84C] via-[#E8D5A3] to-[#C9A84C] bg-clip-text text-transparent">Madina Dental Care</span>
+                <span className="bg-gradient-to-r from-[#C9A84C] via-[#E8D5A3] to-[#C9A84C] bg-clip-text text-transparent">Happy Smiles Dental Care</span>
               </h2>
 
               {/* Description */}
               <div className="space-y-4">
                 <p className="text-[#A0A0A0] leading-relaxed text-base">
-                  Welcome to Madina Dental Care, where your smile is our passion. We are committed to providing exceptional dental care in a comfortable and welcoming environment.
+                  Welcome to Happy Smiles Dental Care, where your smile is our passion. We are committed to providing exceptional dental care in a comfortable and welcoming environment.
                 </p>
                 <p className="text-[#A0A0A0] leading-relaxed text-base">
                   With over 15 years of experience and advanced technology, we deliver personalized treatments that give you the confident, healthy smile you deserve.
