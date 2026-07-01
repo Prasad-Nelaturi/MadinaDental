@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Award, Heart, Shield, Users, Sparkles, ArrowRight, Calendar, Stethoscope, Quote } from 'lucide-react';
+import { Award, Heart, Shield, Users, Sparkles, ArrowRight, Stethoscope } from 'lucide-react';
 import { Link } from 'react-scroll';
 import CountUp from 'react-countup';
 import { useInView } from 'react-intersection-observer';

@@ -56,7 +56,7 @@ const Footer = () => {
               {socialIcons.map((social, index) => (
                 <a
                   key={index}
-                  href="#"
+                  href="/"
                   className="w-10 h-10 rounded-xl bg-[#121212] flex items-center justify-center text-[#A0A0A0] hover:text-[#C9A84C] transition-all duration-300 shadow-[4px_4px_8px_#0a0a0a,_-4px_-4px_8px_#1a1a1a] hover:shadow-[2px_2px_4px_#0a0a0a,_-2px_-2px_4px_#1a1a1a]"
                   aria-label={social.label}
                 >

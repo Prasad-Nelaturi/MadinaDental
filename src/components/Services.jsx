@@ -4,13 +4,9 @@ import {
   Sparkles,
   Smile,
   Syringe,
-  Brush,
   Activity,
   Microscope,
-  Shield,
-  Heart,
   ChevronRight,
-  Star
 } from 'lucide-react';
 
 const Services = () => {
