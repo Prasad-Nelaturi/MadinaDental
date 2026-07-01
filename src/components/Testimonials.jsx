@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Star, ChevronLeft, ChevronRight, Quote, Sparkles, ArrowRight } from 'lucide-react';
 
@@ -66,16 +66,19 @@ const Testimonials = () => {
     }
   ];
 
-  const itemsPerView = window.innerWidth < 768 ? 1 : window.innerWidth < 1024 ? 2 : 3;
+  const itemsPerView = typeof window !== 'undefined' 
+    ? window.innerWidth < 768 ? 1 : window.innerWidth < 1024 ? 2 : 3 
+    : 3;
   const totalSlides = Math.ceil(testimonials.length / itemsPerView);
 
-  const nextSlide = () => {
+  // Wrap nextSlide and prevSlide in useCallback
+  const nextSlide = useCallback(() => {
     setCurrentIndex((prev) => (prev + 1) % totalSlides);
-  };
+  }, [totalSlides]);
 
-  const prevSlide = () => {
+  const prevSlide = useCallback(() => {
     setCurrentIndex((prev) => (prev - 1 + totalSlides) % totalSlides);
-  };
+  }, [totalSlides]);
 
   const getVisibleTestimonials = () => {
     const start = currentIndex * itemsPerView;
@@ -83,7 +86,7 @@ const Testimonials = () => {
     return testimonials.slice(start, end);
   };
 
-  // Auto-scroll
+  // Auto-scroll - Fixed with useCallback
   useEffect(() => {
     const interval = setInterval(() => {
       if (!isDragging) {

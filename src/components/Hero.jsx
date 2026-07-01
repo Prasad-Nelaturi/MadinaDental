@@ -1,30 +1,9 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Award, ChevronDown } from 'lucide-react';
 import { Link } from 'react-scroll';
 
-  const cards = [
-    { id: 1, rot: -9, depth: 14, img: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=400&h=600&fit=crop&crop=faces&q=80' },
-    { id: 2, rot: -5, depth: 10, img: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=400&h=600&fit=crop&crop=faces&q=80' },
-    { id: 3, rot: -2, depth: 8, img: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=400&h=600&fit=crop&crop=faces&q=80' },
-    { id: 4, rot: 3, depth: 12, img: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=400&h=600&fit=crop&crop=faces&q=80' },
-    { id: 5, rot: 0, depth: 6, img: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=400&h=600&fit=crop&crop=faces&q=80' },
-    { id: 6, rot: 4, depth: 11, img: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=400&h=600&fit=crop&crop=faces&q=80' },
-    { id: 7, rot: 7, depth: 9, img: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=400&h=600&fit=crop&crop=faces&q=80' },
-    { id: 8, rot: -4, depth: 13, img: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=400&h=600&fit=crop&crop=faces&q=80' },
-  ];
-
 const Hero = () => {
-  const cardsRef = useRef([]);
-
-useEffect(() => {
-  cardsRef.current.forEach((card, i) => {
-    if (card) {
-      card.style.transform = `translateY(${i * 10}px) rotate(${cards[i].rot}deg)`;
-    }
-  });
-}, [cards]);
-
   const stats = [
     { icon: <Award className="w-5 h-5" />, value: '10,000+', label: 'Happy Patients' },
     { icon: <Award className="w-5 h-5" />, value: '15+', label: 'Years Experience' },
@@ -33,39 +12,19 @@ useEffect(() => {
   ];
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center overflow-hidden pt-20">
-      {/* Banner Background Image */}
-      <div className="absolute inset-0 z-0">
-        {/* Background Image */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=1920&h=1080&fit=crop&q=80)',
-            backgroundPosition: 'center 30%',
-          }}
-        />
-        
-        {/* Dark Overlay - Multiple layers for depth */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0D0B0A]/90 via-[#0D0B0A]/80 to-[#0D0B0A]/95" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0D0B0A]/70 via-transparent to-[#0D0B0A]/70" />
-        
-        {/* Gold Accent Overlay */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(201,168,76,0.08)_0%,_transparent_70%)]" />
-        
-        {/* Bottom Gradient for smooth transition */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#0D0B0A] to-transparent" />
-      </div>
-
-      {/* Floating Particles - Gold */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-[#C9A84C]/5 rounded-full blur-3xl animate-float" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#D4B85C]/5 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }} />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-[#C9A84C]/3 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
-      </div>
+<section
+  id="home"
+  className="hero-section relative min-h-screen flex items-center overflow-hidden pt-20"
+>
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 bg-[#0D0B0A]/10" />
+      
+      {/* Gradient Overlay for better text visibility */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[#0D0B0A]/90 via-[#0D0B0A]/0 to-[#0D0B0A]/0" />
 
       {/* Content */}
-      <div className="relative z-10 container-custom py-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="relative z-10 container-custom py-20 w-full">
+        <div className="max-w-3xl">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -126,37 +85,6 @@ useEffect(() => {
               ))}
             </div>
           </motion.div>
-
-          {/* Cards Row */}
-          <div className="relative h-[400px] lg:h-[500px] hidden lg:block">
-            {cards.map((card, index) => (
-              <motion.div
-                key={card.id}
-                ref={el => cardsRef.current[index] = el}
-                initial={{ opacity: 0, y: 50, rotate: card.rot + 10 }}
-                animate={{ opacity: 1, y: 0, rotate: card.rot }}
-                transition={{ delay: 0.3 + index * 0.08 }}
-                whileHover={{ scale: 1.08, zIndex: 20 }}
-                className="absolute neu-gold overflow-hidden cursor-pointer"
-                style={{
-                  width: `${130 + (index % 3) * 20}px`,
-                  height: `${180 + (index % 3) * 30}px`,
-                  left: `${4 + index * 11}%`,
-                  top: `${20 + (index % 4) * 15}px`,
-                  zIndex: 10 - index % 3,
-                  transform: `rotate(${card.rot}deg)`,
-                  border: '1px solid rgba(201, 168, 76, 0.08)',
-                }}
-              >
-                <img
-                  src={card.img}
-                  alt="Dental team"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0D0B0A]/60 via-transparent to-transparent" />
-              </motion.div>
-            ))}
-          </div>
         </div>
 
         {/* Scroll Indicator */}
@@ -174,6 +102,16 @@ useEffect(() => {
           </Link>
         </motion.div>
       </div>
+
+      <style jsx>{`
+        @keyframes float {
+          0%, 100% { transform: translateY(0px) rotate(0deg); }
+          50% { transform: translateY(-20px) rotate(3deg); }
+        }
+        .animate-float {
+          animation: float 6s ease-in-out infinite;
+        }
+      `}</style>
     </section>
   );
 };

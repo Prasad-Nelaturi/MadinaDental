@@ -354,3 +354,16 @@
     border-radius: 16px;
   }
 }
+.hero-section {
+  background-image: url("https://cdn.shortpixel.ai/spai/q_lossy+ret_img+to_auto/www.woodsidedentalcare.net/wp-content/uploads/cdd4a88d-af8b-4c29-ab83-a16367d63e1f-1798x899.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hero-section {
+    background-position: 65% center;
+  }
+}
