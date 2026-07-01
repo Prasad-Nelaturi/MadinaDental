@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Mail, Phone, MapPin, Calendar, Star, Award, Users, Sparkles, ArrowRight, ChevronRight, Share2, Heart } from 'lucide-react';
-import { FaInstagram, FaTwitter, FaLinkedinIn } from 'react-icons/fa';
+import { Mail, Phone, Calendar, Star, Award, Users, Sparkles, ArrowRight, ChevronRight, Heart } from 'lucide-react';
+import { FaInstagram, FaTwitter } from 'react-icons/fa';
 
 const Doctors = () => {
-  const [selectedDoctor, setSelectedDoctor] = useState(null);
   const [liked, setLiked] = useState({});
 
   const doctors = [
