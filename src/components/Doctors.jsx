@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Mail, Phone, Calendar, Star, Award, Users, Sparkles, ArrowRight, ChevronRight, Heart } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { Mail, Phone, Calendar, Star, Users, Sparkles, ArrowRight, ChevronRight, Heart } from 'lucide-react';
 import { FaInstagram, FaTwitter } from 'react-icons/fa';
 
 const Doctors = () => {

@@ -91,7 +91,7 @@ const Testimonials = () => {
       }
     }, 5000);
     return () => clearInterval(interval);
-  }, [isDragging, currentIndex]);
+  }, [isDragging, nextSlide]);
 
   // Touch events for mobile
   const handleTouchStart = (e) => {

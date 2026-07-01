@@ -3,9 +3,6 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Award, ChevronDown } from 'lucide-react';
 import { Link } from 'react-scroll';
 
-const Hero = () => {
-  const cardsRef = useRef([]);
-
   const cards = [
     { id: 1, rot: -9, depth: 14, img: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=400&h=600&fit=crop&crop=faces&q=80' },
     { id: 2, rot: -5, depth: 10, img: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=400&h=600&fit=crop&crop=faces&q=80' },
@@ -17,13 +14,16 @@ const Hero = () => {
     { id: 8, rot: -4, depth: 13, img: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=400&h=600&fit=crop&crop=faces&q=80' },
   ];
 
-  useEffect(() => {
-    cardsRef.current.forEach((card, i) => {
-      if (card) {
-        card.style.transform = `translateY(${i * 10}px) rotate(${cards[i].rot}deg)`;
-      }
-    });
-  }, []);
+const Hero = () => {
+  const cardsRef = useRef([]);
+
+useEffect(() => {
+  cardsRef.current.forEach((card, i) => {
+    if (card) {
+      card.style.transform = `translateY(${i * 10}px) rotate(${cards[i].rot}deg)`;
+    }
+  });
+}, [cards]);
 
   const stats = [
     { icon: <Award className="w-5 h-5" />, value: '10,000+', label: 'Happy Patients' },
